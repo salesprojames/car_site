@@ -1,0 +1,32 @@
+.navbar {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 16px;
+    padding-left: 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+  background: gray;
+  color: white;
+}
+
+.active {
+  font-size: 20px !important;
+}
+
+.car {
+    padding-top: 100px;
+    max-width: 400px;
+}

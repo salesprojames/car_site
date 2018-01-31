@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="contact_us.html">Contact Us</a>
+    <a class="active" href="about_us.html">About Us</a>
+  </div>
+  <table class="table">
+    <tr>
+      <th>Car Image</th>
+      <th>Name</th>
+      <th>Horsepower</th>
+    </tr>
+    <tr>
+      <td><img src="2018challenger.jpg" height=200 width=300></img></td>
+      <td>2018 Dodge Challenger</td>
+      <td>305</td>
+      <td>
+        <input type="button" value="Delete Row" onclick="DeleteRow(this);">
+      </td>
+    </tr>
+    <tr>
+      <td><img src="audi.jpg" height=200 width=300></img></td>
+      <td>Audi R8</td>
+      <td>540</td>
+      <td>
+        <input type="button" value="Delete Row" onclick="DeleteRow(this);">
+      </td>
+     </tr>
+     <tr>
+      <td><img src="gtr.jpg" height=200 width=300></img></td>
+      <td>2018 Nissan GT-R</td>
+      <td>565</td>
+      <td>
+        <input type="button" value="Delete Row" onclick="DeleteRow(this);">
+      </td>
+    </tr>
+  </table>
+</body>
+<script type="text/javascript">
+function DeleteRow(btndel) {
+    if (typeof(btndel) == "object") {
+        (btndel).closest("tr").remove();
+    } else {
+        return false;
+    }
+}
+</script>
+</html>
