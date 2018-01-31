@@ -17,8 +17,8 @@
       <th>Horsepower</th>
     </tr>
     <tr>
-      <td><img src="2018challenger.jpg" height=200 width=300></img></td>
-      <td>2018 Dodge Challenger</td>
+      <td><img src="audi.jpg" height=200 width=300></img></td>
+      <td>Audio</td>
       <td>305</td>
       <td>
         <input type="button" value="Delete Row" onclick="DeleteRow(this);">
@@ -43,12 +43,9 @@
   </table>
 </body>
 <script type="text/javascript">
+
 function DeleteRow(btndel) {
-    if (typeof(btndel) == "object") {
-        (btndel).closest("tr").remove();
-    } else {
-        return false;
-    }
+  btndel.closest("tr").remove();
 }
 </script>
 </html>
