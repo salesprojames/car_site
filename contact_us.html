@@ -3,6 +3,7 @@
 <head>
   <title>Contact Us</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
 </head>
 <body>
   <div class="navbar">
@@ -10,19 +11,31 @@
     <a class="active" href="contact_us.html">Contact Us</a>
     <a href="about_us.html">About Us</a>
   </div>
+
   <h1 class="contact">Contact Us</h1>
-  <a class="num" href="tel:814-696-5897">814-696-5897</a>
+  <a class="phone-number" href="tel:814-696-5897">814-696-5897</a>
 
   <br>
   <br>
   <br>
-   <button class="button" onclick="myFunction()">MORE INFO</button>
-  <p class="dropdown" id="demo"></p>
+   <button id="showButton" onclick="showMore()">MORE INFO</button>
+  <div class="d-none" id="demo">
+    <p>A Subaru is more than a car - it represents a lifestyle that celebrates adventure, freedom, the Great Outdoors, and time with family and friends.Known for its stylish design and utility, Subaru is also notorious for its safety, engineering, longevity, and durability. A well-maintained Subaru is capable of going 300,000 miles during it's life. It is, after all, a Subaru - a little bit of love travels a long way.</p>
+  </div>
 
 </body>
 <script type="text/javascript">
-  function myFunction() {
-    document.getElementById("demo").innerHTML = "A Subaru is more than a car - it represents a lifestyle that celebrates adventure, freedom, the Great Outdoors, and time with family and friends.Known for its stylish design and utility, Subaru is also notorious for its safety, engineering, longevity, and durability. A well-maintained Subaru is capable of going 300,000 miles during it's life. It is, after all, a Subaru - a little bit of love travels a long way."
-}
+  var demo = document.getElementById("demo");
+  var showButton = document.getElementById("showButton");
+
+  function showMore(){
+    demo.classList.toggle("d-none");
+    if (showButton.innerHTML == "MORE INFO"){
+      showButton.innerHTML = "LESS INFO";
+    } else {
+      showButton.innerHTML = "MORE INFO";
+    }
+  }
+
 </script>
 </html>
